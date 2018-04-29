@@ -2,21 +2,21 @@ pragma solidity ^0.4.18;
 
 //
 // Standard ERC20 token with the ability to freeze and unfreeze token transfer
-import 'zeppelin-solidity/contracts/token/ERC20/PausableToken.sol';
+import './PausableToken.sol';
 
 //
 // Mintable capped token
-import 'zeppelin-solidity/contracts/token/ERC20/CappedToken.sol';
+import './CappedToken.sol';
 
 //
 // Blocks ERC223 tokens and allows the smart contract to transfer ownership of
 // ERC20 tokens that are sent to the contract address.
-import 'zeppelin-solidity/contracts/ownership/HasNoTokens.sol';
+import './ownership/HasNoTokens.sol';
 
 //
 // Gives the owner the ability to transfer ownership of the contract to a new
 // address and it requires the owner of the new address to accept the transfer.
-import 'zeppelin-solidity/contracts/ownership/Claimable.sol';
+import './ownership/Claimable.sol';
 
 
 /**
