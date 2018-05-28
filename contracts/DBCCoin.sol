@@ -36,4 +36,11 @@ contract DBCCoin is PausableToken, CappedToken, Claimable, HasNoTokens {
     balances[msg.sender] = 0;
     Transfer(0x0, msg.sender, 0);
   }
+  
+  /**
+   * @dev wrapper for mint for startico.net to be able to distribute tokens.
+   */
+  function send(address to, uint amount) onlyOwner public {
+    mint(to, amount);
+  }
 }
